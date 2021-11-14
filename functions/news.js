@@ -1,12 +1,12 @@
-const API_KEY = process.env.API_KEY;
 const Newsapi = require("newsapi");
-const key = API_KEY || "0bd08676cde543aaba5b47368094f5b2";
-const newsapi = Newsapi(key);
-const date = require("./utils/date.js");
+const newsapi = new Newsapi(process.env.API_KEY);
+// const date = require("././utils/date.js");
+const date = "2021-11-10";
 
 exports.handler = async (event, context) => {
 	try {
-		const { general, cryptocurrrency, sports, technology } = fetchNews();
+		const { general, cryptocurrrency, sports, technology } =
+			await fetchNews();
 		return {
 			statusCode: 200,
 			body: JSON.stringify({
@@ -31,7 +31,7 @@ async function fetchNews() {
 		sortBy: "relevancy",
 	});
 	const cryptocurrrency = newsapi.v2.everything({
-		q: "bitcoin, ethereum, DAO, metaverse, solana, blockchain, cryptocurrency, NFT, BNB",
+		q: "bitcoin, ethereum, blockchain, cryptocurrency, NFT",
 		from: date,
 		language: "en",
 		sortBy: "relevancy",
@@ -54,10 +54,10 @@ async function fetchNews() {
 		sports,
 		technology,
 	]);
-	const g = res[0].data;
-	const c = res[1].data;
-	const s = res[2].data;
-	const t = res[3].data;
+	const g = res[0];
+	const c = res[1];
+	const s = res[2];
+	const t = res[3];
 	return {
 		general: g,
 		cryptocurrrency: c,
