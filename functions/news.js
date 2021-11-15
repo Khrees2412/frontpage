@@ -7,6 +7,7 @@ exports.handler = async (event, context) => {
 	try {
 		const { general, cryptocurrrency, sports, technology } =
 			await fetchNews();
+		// console.log("gen: ", general);
 		return {
 			statusCode: 200,
 			body: JSON.stringify({
