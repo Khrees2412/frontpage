@@ -44,8 +44,9 @@ export default function Feed() {
 			<div className="w-full px-2 py-16 sm:px-0">
 				<Tab.Group>
 					<Tab.List className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl">
-						{categories.map((category) => (
+						{categories.map((category,i) => (
 							<Tab
+							key={i}
 								className={({ selected }) =>
 									classNames(
 										"w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg",
@@ -63,7 +64,7 @@ export default function Feed() {
 					<Tab.Panels className="mt-2">
 						<Tab.Panel
 							className={classNames(
-								"bg-purple-600 rounded-xl p-3",
+								"bg-blue-600 rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -71,7 +72,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-red-600 rounded-xl p-3",
+								"bg-blue-600 rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -79,7 +80,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-yellow-600 rounded-xl p-3",
+								"bg-blue-600 rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>

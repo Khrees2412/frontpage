@@ -4,7 +4,7 @@ const getUrl = require("./utils/getUrl");
 
 exports.handler = async (event, context) => {
 	const siteUrl = getUrl(event.path);
-	const { data } = await axios(siteUrl);
+	const { data } = await axios.get(`https://${siteUrl}`);
 	const extract = cheerio.load(data);
 
 	try {
@@ -37,7 +37,7 @@ exports.handler = async (event, context) => {
 			statusCode: 200,
 			body: JSON.stringify({
 				message: "Successsfully fetched favicon",
-				data: [icon, name],
+				data: {icon, name},
 			}),
 		};
 	} catch (error) {
