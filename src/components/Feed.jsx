@@ -27,7 +27,6 @@ export default function Feed() {
 			const res = await fetch("/.netlify/functions/news");
 			const json = await res.json();
 			setArticles(json.data);
-			// console.log(json.data);
 		} catch (error) {
 			console.error("error: ", error);
 		}
@@ -64,7 +63,7 @@ export default function Feed() {
 					<Tab.Panels className="mt-2">
 						<Tab.Panel
 							className={classNames(
-								"bg-white rounded-xl p-3",
+								"bg-purple-600 rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -72,7 +71,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-white rounded-xl p-3",
+								"bg-red-600 rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -80,7 +79,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-white rounded-xl p-3",
+								"bg-yellow-600 rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -88,7 +87,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-white rounded-xl p-3",
+								"bg-blue-600 rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>

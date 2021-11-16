@@ -6,14 +6,14 @@ export default function Card({ data }) {
 					key={d.url}
 					href={d.url}
 					_target="blank"
-					class="w-full mx-auto max-w-md bg-pink-500 rounded-xl shadow-md overflow-hidden md:max-w-2xl my-3 border-indigo-200"
+					class="w-full h-[450px] mx-auto max-w-md rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6"
 				>
 					<div class="md:flex">
 						<div class="md:flex-shrink-0">
 							<img
 								class="h-48 w-full object-cover md:w-48 rounded-lg"
 								src={d.urlToImage}
-								alt="article img"
+								alt="article's img"
 							/>
 						</div>
 						<div class="p-8">
@@ -28,10 +28,12 @@ export default function Card({ data }) {
 								{d.description}
 							</a>
 							<p class="mt-2 text-gray-500">{d.content}</p>
-							<div>
-								{" "}
-								<span className="text-gray-700 font-medium p-2">
+							<div className="flex justify-between flex-end">
+								<span className="text-gray-800 font-medium p-2">
 									{d.author}
+								</span>
+                                <span className="text-gray-800 font-medium p-2">
+									{d.publishedAt}
 								</span>{" "}
 								<span>{d.source.name}</span>{" "}
 							</div>
@@ -42,12 +44,3 @@ export default function Card({ data }) {
 		</div>
 	);
 }
-
-// source
-// author
-// description
-// title
-// url
-// urlToImage
-// content
-// publishedAt

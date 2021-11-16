@@ -4,7 +4,10 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				brand: "#BA55D3",
+				brand: "#2A2A72",
+				primary:"#87BFFF",
+				pp:"#6E2594",
+				ss:"#631A86",
 				solid: "#0B132A",
 			},
 			fontFamily: {
