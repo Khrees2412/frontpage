@@ -1,6 +1,6 @@
-import cheerio from "cheerio";
-import axios from "axios";
-import getUrl from "./utils/getUrl";
+const cheerio = require("cheerio");
+const axios = require("axios");
+const getUrl = require("./utils/getUrl");
 
 exports.handler = async (event, context) => {
 	const siteUrl = getUrl(event.path);

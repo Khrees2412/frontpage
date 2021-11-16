@@ -1,14 +1,18 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Categories from "../components/Categories";
+import Feed from "../components/Feed";
+import Bookmark from "../components/Bookmark";
 
 export default function Home() {
 	return (
 		<div>
-			<div className="ml-16 flex flex-col font-brand">
+			<div className="flex flex-col justify-around items-center bg-gray-800">
 				<Navbar />
 				<Hero />
-				<Categories />
+				<Bookmark />
+				<div className="w-4/5 m-auto">
+					<Feed />
+				</div>
 			</div>
 		</div>
 	);
