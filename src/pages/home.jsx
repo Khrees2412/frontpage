@@ -5,7 +5,7 @@ import Feed from "../components/Feed";
 
 export default function Home() {
 	return (
-		<div>
+		<>
 			<div className="min-h-screen flex flex-col justify-around items-center bg-gray-800">
 				<Navbar />
 				<Hero />
@@ -14,6 +14,6 @@ export default function Home() {
 					<Feed />
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
