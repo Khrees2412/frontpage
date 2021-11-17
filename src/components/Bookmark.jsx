@@ -57,23 +57,23 @@ export default function Bookmark() {
 			<h1 className="my-5 font-extrabold text-lg text-center text-white">
 				Add a bookmark
 			</h1>
+			<div className="flex ">
 			<input
 				type="text"
 				value={url}
 				onChange={handleUrl}
 				placeholder="Enter website url..."
-				className="p-3 rounded-md font-bold"
+				className="p-3 w-full rounded-md font-bold"
 			/>
 			<button
 			className="w-full p-4 rounded-full text-white"
 				onClick={() => {
-
-				// 
 				addBookmark()
 				}}
 			>
 				ADD
 			</button>
+			</div>
 {
 	info.length > 0 &&
 <div className="bg-brand p-4 w-full rounded-md">

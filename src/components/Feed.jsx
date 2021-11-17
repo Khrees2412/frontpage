@@ -43,7 +43,7 @@ export default function Feed() {
 		<Suspense fallback={<div>loading...</div>}>
 			<div className="w-full px-2 py-16 sm:px-0">
 				<Tab.Group>
-					<Tab.List className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl">
+					<Tab.List className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl text-2xl font-semibold">
 						{categories.map((category,i) => (
 							<Tab
 							key={i}
@@ -64,7 +64,7 @@ export default function Feed() {
 					<Tab.Panels className="mt-2">
 						<Tab.Panel
 							className={classNames(
-								"bg-blue-600 rounded-xl p-3",
+								" rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -72,7 +72,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-blue-600 rounded-xl p-3",
+								" rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -80,7 +80,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-blue-600 rounded-xl p-3",
+								" rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
@@ -88,7 +88,7 @@ export default function Feed() {
 						</Tab.Panel>
 						<Tab.Panel
 							className={classNames(
-								"bg-blue-600 rounded-xl p-3",
+								" rounded-xl p-3",
 								"focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60"
 							)}
 						>
