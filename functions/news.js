@@ -1,13 +1,13 @@
 const Newsapi = require("newsapi");
 const newsapi = new Newsapi(process.env.API_KEY);
-// const date = require("././utils/date.js");
-const date = "2021-11-10";
+// const date = require("./utils/date");
+const date = "2022-01-05";
 
 exports.handler = async (event, context) => {
 	try {
 		const { general, cryptocurrrency, sports, technology } =
 			await fetchNews();
-		// console.log("gen: ", general);
+		console.log(date);
 		return {
 			statusCode: 200,
 			body: JSON.stringify({
