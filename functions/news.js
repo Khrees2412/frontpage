@@ -14,9 +14,7 @@ const findDate = () => {
 	);
 	return days;
 };
-const lw = findDate().toString();
-const d = lw.split(" ");
-const n = d.slice(1, 4);
+const d = findDate().toString().split(" ").slice(1, 4);
 
 const dateTable = {
 	Jan: "1",
@@ -39,7 +37,7 @@ function findMonthNumber(item) {
 		}
 	}
 }
-const r = n.reverse();
+const r = d.reverse();
 const theMonth = r[2];
 const month = findMonthNumber(theMonth);
 //re-arrange date properly to fit NewsAPI format
